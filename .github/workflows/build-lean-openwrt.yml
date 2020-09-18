@@ -28,7 +28,7 @@ env:
   CONFIG_FILE: config/lean/*.config
   DIY_SH: scripts/lean-openwrt.sh
   FEEDS_CONF: feeds.conf.default
-  SSH_ACTIONS: true
+  SSH_ACTIONS: false
   KMODS_IN_FIRMWARE: false
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
@@ -81,7 +81,7 @@ jobs:
         cd $OPENWRTROOT
         ../$DIY_SH
 
-    - name: SSH Connection To Actions
+    #- name: SSH Connection To Actions
       #uses: P3TERX/debugger-action@master
       #if: env.SSH_ACTIONS == 'true' || contains(github.event.action, 'ssh')
 
