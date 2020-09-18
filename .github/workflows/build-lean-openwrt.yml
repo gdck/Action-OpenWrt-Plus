@@ -80,6 +80,13 @@ jobs:
         chmod +x $DIY_SH
         cd $OPENWRTROOT
         ../$DIY_SH
+        
+        cat >> .config <<EOF
+        CONFIG_TARGET_ramips=y
+        CONFIG_TARGET_ramips_mt7621=y
+        CONFIG_TARGET_ramips_mt7621_DEVICE_xiaomi_mir3g=y
+        EOF
+
 
     #- name: SSH Connection To Actions
       #uses: P3TERX/debugger-action@master
