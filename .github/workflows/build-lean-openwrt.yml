@@ -180,8 +180,8 @@ jobs:
         CONFIG_PACKAGE_luci-app-zerotier=y
         CONFIG_PACKAGE_luci-udptools=y
         CONFIG_PACKAGE_luci-proto-ipv6=y
-        CONFIG_PACKAGE_luci-proto-openconnect=y
-        CONFIG_PACKAGE_luci-proto-wireguard=y
+        CONFIG_PACKAGE_luci-proto-openconnect=n
+        CONFIG_PACKAGE_luci-proto-wireguard=n
         CONFIG_PACKAGE_luci-theme-argon=y
         CONFIG_PACKAGE_luci-theme-material=y
 
