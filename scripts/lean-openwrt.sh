@@ -13,6 +13,12 @@ pushd package/lean
 git clone --depth=1 https://github.com/fw876/helloworld
 popd
 
+# Add luci-app-passwall-plus
+git clone -b https://github.com/gdck/luci-app-passwall-plus package/diy-packages/passwall
+
+# Add OpenClash
+#git clone --depth=1 -b master https://github.com/vernesong/OpenClash
+
 # Clone community packages to package/community
 mkdir package/community
 pushd package/community
@@ -26,9 +32,6 @@ git clone --depth=1 https://github.com/KyleRicardo/MentoHUST-OpenWrt-ipk
 
 # Add ServerChan
 git clone --depth=1 https://github.com/tty228/luci-app-serverchan
-
-# Add OpenClash
-git clone --depth=1 -b master https://github.com/vernesong/OpenClash
 
 # Add luci-app-onliner (need luci-app-nlbwmon)
 git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner
