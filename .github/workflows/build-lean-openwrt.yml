@@ -82,11 +82,11 @@ jobs:
         ../$DIY_SH
         
         #编译小米R3G固件:
-        cat >> .config <<EOF
-        CONFIG_TARGET_ramips=y
-        CONFIG_TARGET_ramips_mt7621=y
-        CONFIG_TARGET_ramips_mt7621_DEVICE_xiaomi_mir3g=y
-        EOF
+        #cat >> .config <<EOF
+        #CONFIG_TARGET_ramips=y
+        #CONFIG_TARGET_ramips_mt7621=y
+        #CONFIG_TARGET_ramips_mt7621_DEVICE_xiaomi_mir3g=y
+        #EOF
         
         #设置固件大小：
         #cat >> .config << EOF
@@ -253,11 +253,11 @@ jobs:
         CONFIG_PACKAGE_luci-app-cifsd=y
         CONFIG_PACKAGE_luci-app-hd-idle=y
         CONFIG_PACKAGE_luci-app-kodexplorer=y
-        CONFIG_PACKAGE_luci-app-mwan3=y
-        CONFIG_PACKAGE_luci-app-mwan3helper=y
+        CONFIG_PACKAGE_luci-app-mwan3=n
+        CONFIG_PACKAGE_luci-app-mwan3helper=n
         CONFIG_PACKAGE_luci-app-qos=y
         CONFIG_PACKAGE_luci-app-samba=y
-        CONFIG_PACKAGE_luci-app-syncdial=y
+        CONFIG_PACKAGE_luci-app-syncdial=n
         CONFIG_PACKAGE_luci-app-ttyd=y
         CONFIG_PACKAGE_luci-app-usb-printer=y
         CONFIG_PACKAGE_luci-app-vssr=y
