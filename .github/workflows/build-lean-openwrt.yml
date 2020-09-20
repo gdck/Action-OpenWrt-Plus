@@ -101,6 +101,9 @@ jobs:
 
         #软件包：
         cat >> .config <<EOF
+        CONFIG_TARGET_ramips=y
+        CONFIG_TARGET_ramips_mt7621=y
+        CONFIG_TARGET_ramips_mt7621_DEVICE_xiaomi_mir3g=y
         CONFIG_ARIA2_BITTORRENT=y
         CONFIG_ARIA2_NOXML=y
         CONFIG_ARIA2_OPENSSL=y
@@ -253,11 +256,11 @@ jobs:
         CONFIG_PACKAGE_luci-app-cifsd=y
         CONFIG_PACKAGE_luci-app-hd-idle=y
         CONFIG_PACKAGE_luci-app-kodexplorer=y
-        CONFIG_PACKAGE_luci-app-mwan3=n
-        CONFIG_PACKAGE_luci-app-mwan3helper=n
+        CONFIG_PACKAGE_luci-app-mwan3=y
+        CONFIG_PACKAGE_luci-app-mwan3helper=y
         CONFIG_PACKAGE_luci-app-qos=y
         CONFIG_PACKAGE_luci-app-samba=y
-        CONFIG_PACKAGE_luci-app-syncdial=n
+        CONFIG_PACKAGE_luci-app-syncdial=y
         CONFIG_PACKAGE_luci-app-ttyd=y
         CONFIG_PACKAGE_luci-app-usb-printer=y
         CONFIG_PACKAGE_luci-app-vssr=y
@@ -333,7 +336,7 @@ jobs:
         EOF
 
     - name: SSH connection to Actions
-      uses: P3TERX/debugger-action@main
+      uses: gdck/debugger-action@main
       if: env.SSH_ACTIONS == 'true' || contains(github.event.action, 'ssh')
       
     - name: Download Package
