@@ -20,6 +20,7 @@ on:
       - '.github/workflows/build-lean-openwrt.yml'
 #  schedule:
 #    - cron: 0 8 * * 5
+  workflow_dispatch: 
   watch:
     types: started
 
