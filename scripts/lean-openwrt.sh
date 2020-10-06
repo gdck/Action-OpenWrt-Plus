@@ -16,6 +16,9 @@ popd
 # Add luci-app-passwall-plus
 git clone -b https://github.com/gdck/luci-app-passwall-plus package/diy-packages/passwall
 
+# Add luci-app-cupsd
+git clone https://github.com/gdck/luci-app-cupsd package/lean/luci-app-cupsd
+
 # Add OpenClash
 #git clone --depth=1 -b master https://github.com/vernesong/OpenClash
 
